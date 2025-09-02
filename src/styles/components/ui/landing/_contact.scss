@@ -1,0 +1,124 @@
+.contact {
+  padding: 112px 64px;
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 80px;
+  }
+
+  &__content {
+    width: calc(50% - 40px);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      h2 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 120%;
+        letter-spacing: 0%;
+      }
+      p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        letter-spacing: 0%;
+      }
+    }
+    &__social {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      &__item {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        color: var(--text-primary);
+      }
+    }
+  }
+  &__form {
+    width: calc(50% - 40px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    &__input {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      label {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0%;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        resize: none;
+
+        &::placeholder {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          letter-spacing: 0%;
+          color: var(--color-placeholder);
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    &__checkbox {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      input {
+        width: 18px;
+        height: 18px;
+      }
+      label {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+
+        a {
+          color: var(--color-primary);
+          text-decoration: underline;
+        }
+      }
+    }
+    &__button {
+      width: fit-content;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 19px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0%;
+      background: var(--bg-button-submit);
+      color: var(--color-primary);
+      transition: background 0.3s ease;
+    }
+    &__button:hover {
+      background: var(--bg-button-submit-hover);
+    }
+  }
+}

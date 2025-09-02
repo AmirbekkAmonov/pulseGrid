@@ -1,0 +1,118 @@
+.landing-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  // background-color: var(--bg-header);
+  padding: 16px 64px;
+  transition: background-color 0.3s ease; /* fon o‘zgarishi yumshoq bo‘lsin */
+
+  &.scrolled {
+    background-color: var(--bg-header-scrolled);
+    backdrop-filter: blur(1px); /* orqa fonni biroz blurlash */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    img {
+      width: 87px;
+      // height: 30px;
+    }
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+
+      li {
+        a {
+          font-size: 16px;
+          font-weight: 700;
+          @include link-underline;
+        }
+        // Dropdown styles
+        &.dropdown {
+          position: relative;
+
+          .dropdown-toggle {
+            font-size: 16px;
+            font-weight: 700;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 0;
+            @include link-underline;
+          }
+
+          .dropdown-arrow {
+            img {
+              width: 12px;
+              height: 12px;
+            }
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          }
+
+          .dropdown-menu {
+            position: absolute;
+            top: 130%;
+            left: 0;
+            padding: 10px 20px;
+            background-color: var(--bg-header);
+            border: 1px solid var(--border-secondary);
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 12px;
+            transform-origin: top center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+            // Initial state (closed)
+            opacity: 0;
+            transform: scale(0.95) translateY(-10px);
+            pointer-events: none;
+
+            li {
+              margin: 0;
+
+              a {
+                display: block;
+                @include link-underline;
+              }
+            }
+
+            // Open state
+            &.open {
+              opacity: 1;
+              transform: scale(1) translateY(0);
+              pointer-events: all;
+            }
+          }
+
+          // Rotate arrow when dropdown is open
+          &.open .dropdown-arrow {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}

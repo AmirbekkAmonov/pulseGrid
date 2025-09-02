@@ -1,0 +1,94 @@
+.faq {
+  padding: 112px 64px;
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 80px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      h2 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 120%;
+        letter-spacing: 0%;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        letter-spacing: 0%;
+      }
+    }
+    .landing-button {
+      max-width: 120px;
+    }
+  }
+  &__accordion {
+    width: calc(55% - 40px);
+
+    .accordion-item {
+      border-top: 1px solid var(--border-secondary);
+      overflow: hidden;
+      transition: all 0.3s ease;
+
+      .accordion-header {
+        width: 100%;
+        padding: 22px 0;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        cursor: pointer;
+        background-color: transparent;
+        color: var(--text-secondary);
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: var(--background-secondary);
+        }
+
+        .icon {
+          transition: transform 0.3s ease;
+          font-size: 22px;
+          font-weight: 700;
+        }
+
+        .icon.rotate {
+          transform: rotate(180deg); // ochilganda aylantirish
+        }
+      }
+
+      .accordion-content {
+        overflow: hidden;
+        transition: all 0.3s ease;
+
+        p {
+          padding: 0 20px 16px 20px;
+          margin: 0;
+          color: var(--color-placeholder-text);
+        }
+      }
+
+      &.active {
+        border-color: var(--border-primary);
+      }
+    }
+  }
+}

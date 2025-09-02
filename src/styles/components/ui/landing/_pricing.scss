@@ -1,0 +1,192 @@
+.pricing {
+  padding: 112px 64px;
+  background: var(--bg-primary);
+
+  .container {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+
+    h2 {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 120%;
+      letter-spacing: 0%;
+      text-align: center;
+    }
+
+    p {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 150%;
+      letter-spacing: 0%;
+      text-align: center;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 19px;
+    overflow: hidden;
+
+    .pricing__button {
+      padding: 16px 32px;
+      background-color: transparent;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0%;
+      color: var(--text-primary);
+      border: 1px solid var(--border-secondary);
+      transition: all 0.3s ease;
+      &.active {
+        background-color: var(--bg-button);
+        border: 1px solid var(--border-primary);
+      }
+
+      &:nth-child(1) {
+        border-radius: 19px 0 0 19px;
+      }
+      &:nth-child(2) {
+        border-radius: 0 19px 19px 0;
+      }
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+    justify-content: center;
+    gap: 32px;
+
+    .pricing__card {
+      position: relative;
+      height: 100%;
+      padding: 32px;
+      border-radius: 20px;
+      border: 1px solid var(--border-secondary);
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      overflow: hidden;
+      z-index: 0;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+        border: 1px solid var(--border-primary);
+      }
+
+      &-text {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        h4 {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 140%;
+          letter-spacing: 0%;
+          text-align: left;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          letter-spacing: 0%;
+          text-align: left;
+        }
+      }
+
+      &-line {
+        width: 100%;
+        height: 1px;
+        background-color: var(--border-secondary);
+      }
+
+      &-price {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        h3 {
+          font-weight: 700;
+          font-size: 56px;
+          line-height: 120%;
+          letter-spacing: 0%;
+          text-align: left;
+
+          span {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 130%;
+            letter-spacing: 0%;
+            text-align: left;
+          }
+        }
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          letter-spacing: 0%;
+          text-align: left;
+        }
+      }
+
+      &-button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+          width: 100%;
+          padding: 12px 32px;
+          border-radius: 19px;
+          background-color: var(--bg-button);
+          color: var(--text-primary);
+          border: 1px solid var(--border-secondary);
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          letter-spacing: 0%;
+          transition: all 0.3s ease;
+          &:hover {
+            background-color: var(--bg-button-hover);
+          }
+        }
+      }
+      &-features {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        p {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          span {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

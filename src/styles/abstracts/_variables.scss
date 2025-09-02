@@ -1,0 +1,33 @@
+:root {
+  // colors
+  --color-primary: #ffffff;
+  --color-placeholder-text: #cacaca;
+  --color-placeholder: #505050;
+  // backgrounds
+  --bg-body: #0a0f18;
+  --bg-primary: linear-gradient(
+    180.67deg,
+    #321b5c 2.39%,
+    #291b48 11.44%,
+    #251b3e 20.77%,
+    #201a33 30.12%,
+    #1c1b29 39.48%,
+    #171a1f 49.33%,
+    #0a0f18 98.04%
+  );
+  --bg-header: #321b5c;
+  --bg-header-scrolled: #151c2977;
+  --bg-input: #ffffff;
+  --bg-button: #9a4dff;
+  --bg-button-hover: #b366ff;
+  --bg-button-submit: linear-gradient(269.98deg, #3bcdf5bf 10%, #5c2e99 99%);
+  --bg-button-submit-hover: linear-gradient(
+    269.98deg,
+    #5c2e99 10%,
+    #3bcdf5bf 99%
+  );
+
+  //border
+  --border-primary: #9a4dff;
+  --border-secondary: #ffffff;
+}

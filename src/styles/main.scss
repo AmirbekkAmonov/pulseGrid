@@ -1,0 +1,19 @@
+@import './abstracts/variables';
+@import './base/base';
+@import './base/mixin';
+
+@import './components/layout/landing/header';
+@import './components/layout/landing/footer';
+@import './components/common/landing/button';
+@import './components/common/landing/heroImg';
+@import './components/ui/landing/hero';
+@import './components/ui/landing/features';
+@import './components/ui/landing/simplicity';
+@import './components/ui/landing/lower';
+@import './components/ui/landing/pricing';
+@import './components/ui/landing/faq';
+@import './components/ui/landing/ready';
+@import './components/ui/landing/contact';
+@import './components/ui/404/notFound';
+@import './components/ui/auth/login';
+@import './components/ui/auth/register';
